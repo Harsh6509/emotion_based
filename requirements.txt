@@ -1,8 +1,0 @@
-Flask
-numpy
-opencv-python-headless
-Pillow
-keras
-tensorflow-cpu
-mediapipe
-gunicorn
