@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EMOTION-BASED MUSIC DETECTION</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🎵 Emotion-Based Music Detection</h1>
+      <p class="subtitle">Capture your Emotion, Then get Song Recommender</p>
+    </header>
+
+    <section class="controls-panel">
+      <div class="video-card">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="capture-canvas" style="display:none"></canvas>
+        <div class="video-controls">
+          <button id="startBtn">Start Camera</button>
+          <button id="stopBtn" disabled>Stop Camera</button>
+          <button id="captureBtn" disabled>Capture Emotion</button>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <label>
+          Language
+          <input id="lang" type="text" placeholder="e.g. Hindi, English" />
+        </label>
+
+        <label>
+          Singer
+          <input id="singer" type="text" placeholder="Optional - e.g. Arijit Singh" />
+        </label>
+
+        <label>
+          Mood
+          <input id="mood" type="text" placeholder="Optional - e.g. Happy, Sad" />
+        </label>
+
+        <div class="detected">
+          <strong>Detected Emotion:</strong>
+          <span id="emotion">—</span>
+        </div>
+
+        <div class="button-row">
+          <button id="recommendBtn" disabled>Recommend me songs</button>
+          <button id="clearBtn">Reset</button>
+        </div>
+
+        <div id="status" class="status"></div>
+      </div>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <h2>Recommendations</h2>
+      <div id="iframe-wrap" class="iframe-wrap"></div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
