@@ -7,7 +7,7 @@ import cv2
 import io
 from PIL import Image
 from keras.models import load_model
-YOUTUBE_API_KEY = "AIzaSyDVRiCVBctIQ6Ywxmxt_q9yr91yz4a_pl8"
+YOUTUBE_API_KEY = "fill the yt api here"
 
 app = Flask(__name__)
 
